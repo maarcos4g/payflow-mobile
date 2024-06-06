@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:mobile/src/modules/splash/splash_controller.dart';
+import 'package:mobile/src/shared/themes/images.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = SplashController();
+    controller.currentUser(context);
     return Scaffold(
       body: SafeArea(
           child: Container(
@@ -14,8 +18,8 @@ class SplashPage extends StatelessWidget {
           child: Stack(
             alignment: Alignment.center,
             children: [
-              Image.asset('assets/images/union.png'),
-              Image.asset('assets/images/logo.png'),
+              Image.asset(AppImages.union),
+              Image.asset(AppImages.logo),
             ],
           ),
         ),

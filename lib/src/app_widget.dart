@@ -4,6 +4,7 @@ import 'package:mobile/src/providers.dart';
 import 'shared/themes/colors.dart';
 
 import 'modules/splash/splash_page.dart';
+import 'modules/auth/auth_page.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
@@ -22,6 +23,7 @@ class AppWidget extends StatelessWidget {
         initialRoute: "/splash",
         routes: {
           '/splash': (context) => const SplashPage(),
+          '/auth': (context) => const AuthPage(),
         },
       ),
     );
